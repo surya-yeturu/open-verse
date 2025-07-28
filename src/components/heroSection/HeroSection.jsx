@@ -29,9 +29,9 @@ function HeroSection() {
         {/* Tagline */}
         <Typography
           variant="lead"
-          className="text-white text-center max-w-xl text-lg sm:text-2xl font-light"
+          className="text-white font-bold text-center max-w-xl text-lg sm:text-2xl font-light"
         >
-          Open your soul and write your story.
+          Share your knowledge in OpenVerse
         </Typography>
       </div>
     </section>

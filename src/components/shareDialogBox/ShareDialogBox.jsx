@@ -15,13 +15,16 @@ export default function ShareDialogBox() {
 
   const { mode } = useContext(myContext);
 
+  const iconBaseColor = mode === "dark" ? "white" : "black";
+
   return (
     <Fragment>
       <div className="cursor-pointer">
         <AiOutlineShareAlt
           onClick={handleOpen}
           size={20}
-          style={{ color: "white" }}
+          color={iconBaseColor}
+          className="hover:opacity-80 transition-opacity duration-200"
         />
       </div>
 
@@ -29,45 +32,71 @@ export default function ShareDialogBox() {
       <Dialog
         open={open}
         handler={handleOpen}
-        className="bg-[#2f3542] p-4 rounded-lg"
-        style={{
-          color: mode === "dark" ? "white" : "black",
-          maxWidth: "350px",
-          margin: "0 auto",
-        }}
+        className={`p-6 rounded-lg max-w-xs mx-auto ${
+          mode === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"
+        }`}
+        style={{ margin: "0 auto" }}
       >
-        <DialogBody>
+        <DialogBody className="flex flex-col items-center justify-center h-48 gap-6">
           {/* Social Icons */}
-          <div className="flex justify-center gap-5 mb-4">
-            <a href="#">
+          <div className="flex justify-center gap-8">
+            <a
+              href="#"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiFillLinkedin
-                size={35}
-                className="text-white hover:text-blue-400"
+                size={40}
+                className={`hover:text-blue-500 transition-colors duration-200 ${
+                  mode === "dark" ? "text-white" : "text-black"
+                }`}
               />
             </a>
-            <a href="#">
+            <a
+              href="#"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiFillInstagram
-                size={35}
-                className="text-white hover:text-pink-400"
+                size={40}
+                className={`hover:text-pink-500 transition-colors duration-200 ${
+                  mode === "dark" ? "text-white" : "text-black"
+                }`}
               />
             </a>
-            <a href="#">
+            <a
+              href="#"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiFillGithub
-                size={35}
-                className="text-white hover:text-gray-400"
+                size={40}
+                className={`hover:text-gray-600 transition-colors duration-200 ${
+                  mode === "dark" ? "text-white" : "text-black"
+                }`}
               />
             </a>
-            <a href="#">
+            <a
+              href="#"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <AiFillFacebook
-                size={35}
-                className="text-white hover:text-blue-600"
+                size={40}
+                className={`hover:text-blue-700 transition-colors duration-200 ${
+                  mode === "dark" ? "text-white" : "text-black"
+                }`}
               />
             </a>
           </div>
 
           {/* Footer Text */}
-          <div className="text-center">
-            <p className="text-gray-400 text-sm">Powered by Devknus</p>
+          <div className="text-center text-gray-400 text-sm mt-auto">
+            Powered by OpenVerse
           </div>
         </DialogBody>
       </Dialog>

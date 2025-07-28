@@ -35,7 +35,7 @@ export default function Nav() {
         <Link to="/">
           <div className="flex items-center gap-2">
             <img
-              src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png"
+              src="https://cdn-icons-png.flaticon.com/128/3917/3917361.png"
               alt="OpenVerse Logo"
               className="w-10 h-10"
             />

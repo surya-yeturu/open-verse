@@ -18,7 +18,7 @@ function Footer() {
         <div className="flex title-font font-medium items-center md:justify-start justify-center text-white">
           <img
             className="w-10"
-            src="https://cdn-icons-png.flaticon.com/128/3685/3685253.png"
+            src="https://cdn-icons-png.flaticon.com/128/3917/3917361.png"
             alt="logo"
           />
           <span className="ml-3 text-xl">OpenVerse</span>
